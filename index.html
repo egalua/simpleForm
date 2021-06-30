@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="app/app.js"></script>
+    <title>Форма заказа</title>
+</head>
+<body>
+    <div class="form-box form-box_position">
+        <form action="#" method="GET" class="order-form">
+            <b class="common-padding">Сделай шаг к выздоровлению</b>
+            <div class="order-form__name-box common-padding">
+                <label for="order-form-name" class="order-form__field-label">
+                    Ваше <span>имя<span>
+                </label>
+                <input type="text" id="order-form-name" name="client-name" placeholder="Алексей" class="order-form__field order-form__field_name">
+            </div>
+            <div class="order-form__phone-box common-padding">
+                <label for="order-form-phone" class="order-form__field-label">
+                    Ваш <span>телефон</span>
+                </label>
+                <div class="order-form__region-box">
+                    <input type="text" id="order-form-phone" name="client-phone" placeholder="+7 (123) 456 78-90" class="order-form__field order-form__field_phone">
+
+                    <div class="region-list-wrapper">
+                        <!-- для отключения optiion: class="order-form__field_clean" -->
+                        <select aria-label="выбор региона" name="region" id="order-form-region" class="order-form__field order-form__field_region order-form__field_ru">
+                            <option value="ru" aria-label="Россия" selected>
+                                ru
+                            </option>
+                            <option value="kz" aria-label="Казахстан">
+                                kz
+                            </option>
+                            <option value="by" aria-label="Белоруссия">
+                                by
+                            </option>
+                        </select>
+                        <!-- для включения/выключения order-form__region-list: line style = "display:flex; | display:none;" -->
+                        <ul class="order-form__region-list" style="display: none;">
+                            <li class="order-form__region-item order-form__region-item_ru order-form__region-item_hover">
+                                <span class="hidden">Россия</span>
+                                <span class="order-form__region-value">ru</span> 
+                            </li>
+                            <li class="order-form__region-item order-form__region-item_kz">
+                                <span class="hidden">Казахстан</span>
+                                <span class="order-form__region-value">kz</span> 
+                            </li>
+                            <li class="order-form__region-item order-form__region-item_by">
+                                <span class="hidden">Белоруссия</span>
+                                <span class="order-form__region-value">by</span> 
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <button type="submit" class="button">
+                <span>Заказать</span>
+                <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.5 6H16.5M16.5 6L11.5 1M16.5 6L11.5 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <div class="connection-mode">
+                <span>Trusted</span>
+                <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="5.71429" width="12.1429" height="9.28572" rx="3" fill="#428A60"/>
+                    <path d="M3.14282 3.92857C3.14282 2.31116 4.45399 1 6.07139 1C7.6888 1 8.99997 2.31117 8.99997 3.92857V6.85714H3.14282V3.92857Z" stroke="#428A60" stroke-width="2"/>
+                </svg> 
+                <span>Secure</span> 
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>
